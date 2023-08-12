@@ -1,5 +1,7 @@
 import React, { useState , useEffect}  from 'react'
 import { Box, Button, Typography, Alert } from "@mui/material";
+import VadModel from './VadModel';
+import MyComponent from './Test';
 
 
 function Speechtotext() {
@@ -51,9 +53,23 @@ function Speechtotext() {
             Stop
         </Button>
         
-        <Typography variant='h6'>
-            Listening.... {seconds} seconds
-        </Typography>
+
+
+        {buttonclickstate === true ? 
+            
+            <Typography variant='h6'>
+                    Listening.... {seconds} seconds
+            
+            </Typography> : null
+            
+           
+        }
+
+        {buttonclickstate === true ? <VadModel></VadModel>: null}
+
+{/* 
+        {buttonclickstate === true ? <MyComponent></MyComponent>: null}
+         */}
 
     </Box>
 
